@@ -18,8 +18,9 @@ h2 {
     justify-content: center; /* Center items horizontally */
 }
 
+/* Tool Item Styles */
 .tool-item {
-    flex: 0 1 30%; /* Each item takes up to 30% of the width (3 items per row) */
+    flex: 0 1 calc(25% - 20px); /* Default to 4 items per row */
     margin: 10px; /* Space around each tool item */
     padding: 20px; /* Add some padding to the tool item */
     background-color: white; /* White background for each tool container */
@@ -27,7 +28,14 @@ h2 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center; /* Center text under the images */
     transition: transform 0.2s; /* Smooth transition for hover effect */
+     
 }
+.tool-item p {
+    font-size: 1rem; /* Base font size for descriptions */
+    color: #666; /* A lighter color for the description */
+    margin-top: 5px; /* Space above the description */
+}
+
 
 .tool-item:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
@@ -44,34 +52,27 @@ h2 {
     color: #333; /* Dark text color */
 }
 
-
-.tool-box {
-    flex: 1 1 calc(33% - 40px); /* Desktop */
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .tool-box {
-        flex: 1 1 calc(50% - 40px); /* Tablets */
+    .tool-item {
+        flex: 0 1 calc(50% - 20px); /* Two items per row for tablets */
     }
-}
 
-@media (max-width: 480px) {
-    .tool-box {
-        flex: 1 1 100%; /* Mobile */
-    }
-}
-@media (max-width: 768px) {
-    .tool img {
+    .tool-item img {
         width: 60px; /* Smaller image size for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .tool img {
+    .tool-item {
+        flex: 0 1 calc(100% - 20px); /* One item per row for mobile */
+    }
+
+    .tool-item img {
         width: 40px; /* Smaller image size for mobile */
     }
 
-    .tool {
-        margin: 10px; /* Adjust margins for mobile */
+    .tool-item {
+        margin: 10px 0; /* Adjust margins for mobile */
     }
 }
