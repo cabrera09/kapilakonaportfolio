@@ -49,3 +49,48 @@ section {
     margin-right: 10px; 
     border-radius: 30%;/* Space between icon and text */
 }
+@media (max-width: 768px) {
+    #contact {
+        padding: 30px 15px;
+    }
+
+    .contact-info h2 {
+        font-size: 28px; /* Smaller for tablets */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Smaller text for tablets */
+    }
+
+    .social-links a {
+        font-size: 14px; /* Smaller link font size */
+    }
+
+    .social-icon {
+        width: 25px; /* Slightly smaller icons */
+        height: 25px; /* Slightly smaller icons */
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 20px 10px;
+    }
+
+    .contact-info h2 {
+        font-size: 24px; /* Smaller for mobile */
+    }
+
+    .contact-info p {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .social-links a {
+        font-size: 12px; /* Smaller link font size */
+    }
+
+    .social-icon {
+        width: 20px; /* Smaller icons for mobile */
+        height: 20px; /* Smaller icons for mobile */
+    }
+}

@@ -57,3 +57,50 @@ h2 {
 .source-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    #projects h2 {
+        font-size: 32px; /* Slightly smaller for tablets */
+    }
+
+    .project h3 {
+        font-size: 24px; /* Smaller title for tablets */
+    }
+
+    .project p {
+        font-size: 14px; /* Smaller text for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #projects {
+        padding: 30px 15px;
+    }
+
+    .project h3 {
+        font-size: 22px; /* Smaller title for smaller tablets */
+    }
+
+    .project p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    #projects h2 {
+        font-size: 28px; /* Smaller for mobile */
+    }
+
+    .project h3 {
+        font-size: 20px; /* Smaller title for mobile */
+    }
+
+    .project p {
+        font-size: 12px;
+    }
+
+    .project {
+        margin-bottom: 30px; /* Adjust spacing between projects on mobile */
+    }
+}

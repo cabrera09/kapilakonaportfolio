@@ -1,20 +1,48 @@
-/* about.css */
+/* General Styles for About Us */
 
 
-h2 {
-    font-size: 2.5rem;
+#about h2 {
+    font-size: 36px; /* Default font size for desktop */
     margin-bottom: 20px;
 }
 
-.about-content {
-    max-width: 800px; /* Limit content width for better readability */
-    margin: 0 auto; /* Center the content */
-    text-align: left; /* Left-align the text inside the content */
+#about p {
+    font-size: 25px; /* Default font size for desktop */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; 
+    color: azure;/* Center the text */
 }
 
-p {
-    font-size:30px;
-    line-height: 1.6; /* Improved line height for readability */
-    margin: 10px 0; /* Space between paragraphs */
-    color: azure;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    #about h2 {
+        font-size: 32px; /* Slightly smaller for tablets */
+    }
+
+    #about p {
+        font-size: 16px;
+    }
 }
+
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 28px; /* Smaller for smaller tablets */
+    }
+
+    #about p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about h2 {
+        font-size: 24px; /* Smaller for mobile */
+    }
+
+    #about p {
+        font-size: 12px;
+        padding: 0 10px; /* Add padding for small screens */
+    }
+}
+

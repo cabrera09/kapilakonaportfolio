@@ -43,3 +43,35 @@ h2 {
     font-size: 1.5rem;
     color: #333; /* Dark text color */
 }
+
+
+.tool-box {
+    flex: 1 1 calc(33% - 40px); /* Desktop */
+}
+
+@media (max-width: 768px) {
+    .tool-box {
+        flex: 1 1 calc(50% - 40px); /* Tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-box {
+        flex: 1 1 100%; /* Mobile */
+    }
+}
+@media (max-width: 768px) {
+    .tool img {
+        width: 60px; /* Smaller image size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .tool img {
+        width: 40px; /* Smaller image size for mobile */
+    }
+
+    .tool {
+        margin: 10px; /* Adjust margins for mobile */
+    }
+}

@@ -97,7 +97,8 @@ nav
 /* Responsive behavior */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide links by default on mobile */
+        display: flex;
+        justify-content: flex-end; /* Hide links by default on mobile */
         position: absolute;
         font-size: 30px;
         top: 60px;
@@ -108,6 +109,19 @@ nav
         padding: 20px 0;
         z-index: 1000; /* Ensures it appears above other content */
     }
+    /* Example for hiding nav on mobile until the menu icon is clicked */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
 
     .nav-links.show {
         display: flex; /* Show links when the menu is open */

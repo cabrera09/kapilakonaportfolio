@@ -10,6 +10,7 @@ body {
 }
 
 section {
+
   padding: 50px 20px;
   background: rgba(255, 255, 255, 0.288); 
   border-radius: 10px;
@@ -17,3 +18,18 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.445); 
 }
 
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Mobile styles */
+    nav {
+        display: none; /* Example for mobile-friendly nav */
+    }
+
+    /* Add more mobile-specific styles here */
+}
+
+@media (min-width: 1025px) {
+    /* Desktop styles */
+}
