@@ -1,0 +1,19 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
+  background: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDBmOGlhc293ZHNjcGprbTRkZ202bHZveGhoaHA1NXg1NW0xNG10OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BHNfhgU63qrks/giphy.gif') no-repeat center center fixed; /* Set the GIF as the background */
+  background-size: cover; 
+  font-family: Arial, sans-serif; 
+}
+
+section {
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.288); 
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.445); 
+}
+

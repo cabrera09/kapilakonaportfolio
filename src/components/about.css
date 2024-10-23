@@ -1,0 +1,20 @@
+/* about.css */
+
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 800px; /* Limit content width for better readability */
+    margin: 0 auto; /* Center the content */
+    text-align: left; /* Left-align the text inside the content */
+}
+
+p {
+    font-size:30px;
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 10px 0; /* Space between paragraphs */
+    color: azure;
+}

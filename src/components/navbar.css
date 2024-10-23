@@ -1,0 +1,193 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Background style when menu is open */
+body.menu-open {
+    background-color: rgba(61, 19, 61, 0.589); /* Adjust transparency as needed */
+}
+
+/* Navbar container */
+nav {
+    position: fixed; /* Sticks the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes sure the navbar spans the entire width */
+    display: flex;
+    justify-content: space-between; /* Ensures space between logo and links */
+    align-items: center; /* Aligns items vertically */
+    background-color: rgba(48, 6, 39, 0.521); /* Semi-transparent background */
+    padding: 20px 40px; /* Adds padding to the navbar */
+    z-index: 1000; /* Keeps the navbar above other elements */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+/* When the user scrolls */
+nav.scrolled {
+    background-color: rgba(48, 6, 39, 1); /* Darker background on scroll */
+}
+
+/* Navbar links styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between nav links */
+    margin: 0;
+}
+
+nav 
+
+
+/* Logo */
+.logo {
+    font-size: 2rem; /* Increased font size */
+    color: #000000;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Pushes nav links to the right */
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space between links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 40px; /* Increased font size */
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #300829;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 30px;
+    height: 6px;
+    background-color: #000000;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        position: absolute;
+        font-size: 30px;
+        top: 60px;
+        right: 0;
+        background-color: #2a0d338e;
+        flex-direction: column;
+        width: 250px; /* Fixed width for mobile menu */
+        padding: 20px 0;
+        z-index: 1000; /* Ensures it appears above other content */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when the menu is open */
+    }
+
+    .menu-icon {
+        display: flex; /* Show hamburger icon on smaller screens */
+    }
+
+    .menu-icon.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Image and description container */
+/* Image and description container */
+.image-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Portfolio image */
+.image-container img {
+    width: 400px; /* Increased width */
+    height: 400px; /* Increased height */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 30px; /* Increased margin for better spacing */
+}
+
+/* Description next to the image */
+.image-description {
+    text-align: left;
+    color: #34495e;
+}
+
+.image-description h3 {
+    font-size: 50px; /* Increased font size */
+    color: #969393;
+}
+
+.image-description p {
+    font-size: 2rem; /* Increased font size */
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        margin: 0 0 20px 0;
+        width: 500px; /* Adjusted width for mobile */
+        height: 500px; /* Adjusted height for mobile */
+    }
+
+    .image-description {
+        text-align: center;
+    }
+
+    .image-description h3 {
+        font-size: 2rem; /* Adjusted font size for mobile */
+    }
+
+    .image-description p {
+        font-size: 1.5rem; /* Adjusted font size for mobile */
+    }
+}

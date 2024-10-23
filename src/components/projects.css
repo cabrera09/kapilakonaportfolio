@@ -1,0 +1,59 @@
+/* projects.css */
+section {
+    padding: 50px 20px;
+    background: #f5f5f5; /* Light background for the projects section */
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center; /* Center text and items */
+}
+
+h2 {
+    font-size: 3.5rem; /* Larger font size for the heading */
+    margin-bottom: 30px;
+}
+
+.project {
+    background: rgb(255, 255, 255); /* White background for each project */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside project box */
+    margin: 20px auto; /* Centered margin */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 80%; /* Adjust width as needed */
+    max-width: 1000px; /* Max width for larger screens */
+    max-height: 1000px;
+}
+
+.project-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match the container corners */
+    max-height: 600px; /* Set a max height for the image */
+}
+
+.project h3 {
+    font-size: 40px; /* Larger font size for project title */
+    margin: 15px 0; /* Space above and below the title */
+}
+
+.project p {
+    font-size: 1.2rem; /* Larger font size for the description */
+    margin: 10px 0; /* Space above and below the paragraph */
+}
+
+.project-links {
+    margin-top: 15px; /* Space above the links */
+}
+
+.demo-link,
+.source-link {
+    text-decoration: none; /* Remove underline */
+    color: #0f2e4e; /* Link color */
+    margin: 0 10px; /* Space between links */
+    font-size: 2rem; /* Larger font size for links */
+    font-weight: bold;
+}
+
+.demo-link:hover,
+.source-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
