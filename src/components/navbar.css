@@ -30,7 +30,6 @@ nav {
     z-index: 1000; /* Keeps the navbar above other elements */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
     transition: background-color 0.3s ease-in-out;
-    
 }
 
 /* When the user scrolls */
@@ -38,26 +37,14 @@ nav.scrolled {
     background-color: rgba(48, 6, 39, 1); /* Darker background on scroll */
 }
 
-/* Navbar links styling */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Space between nav links */
-    margin: 0;
-}
-
-nav 
-
-
 /* Logo */
 .logo {
     font-size: 2rem; /* Increased font size */
     color: #000000;
     font-weight: bold;
-    font-size: 50px;
 }
 
-/* Navigation links */
+/* Navbar links styling */
 .nav-links {
     display: flex;
     list-style: none;
@@ -71,7 +58,7 @@ nav
 .nav-links li a {
     text-decoration: none;
     color: #ecf0f1;
-    font-size: 40px; /* Increased font size */
+    font-size: 1.5rem; /* Adjusted font size for responsiveness */
     transition: color 0.3s;
 }
 
@@ -96,32 +83,25 @@ nav
 
 /* Responsive behavior */
 @media (max-width: 768px) {
+    nav {
+        padding: 10px 20px; /* Adjust padding for mobile */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
     .nav-links {
-        display: flex;
-        justify-content: flex-end; /* Hide links by default on mobile */
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
         position: absolute;
-        font-size: 30px;
         top: 60px;
         right: 0;
-        background-color: #2a0d338e;
-        flex-direction: column;
+        background-color: rgba(42, 13, 51, 0.9); /* Adjust background color */
         width: 250px; /* Fixed width for mobile menu */
         padding: 20px 0;
         z-index: 1000; /* Ensures it appears above other content */
     }
-    /* Example for hiding nav on mobile until the menu icon is clicked */
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-}
-
 
     .nav-links.show {
         display: flex; /* Show links when the menu is open */
@@ -145,7 +125,6 @@ nav
 }
 
 /* Image and description container */
-/* Image and description container */
 .image-container {
     margin-top: 100px;
     display: flex;
@@ -156,10 +135,10 @@ nav
 
 /* Portfolio image */
 .image-container img {
-    width: 400px; /* Increased width */
-    height: 400px; /* Increased height */
-    border-radius: 50%;
-    object-fit: cover;
+    width: 500px; /* Fixed width for desktop */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: make it circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-right: 30px; /* Increased margin for better spacing */
 }
@@ -183,14 +162,14 @@ nav
 
 @media (max-width: 768px) {
     .image-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack image and description vertically */
         align-items: center;
     }
 
     .image-container img {
         margin: 0 0 20px 0;
-        width: 500px; /* Adjusted width for mobile */
-        height: 500px; /* Adjusted height for mobile */
+        max-width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .image-description {
